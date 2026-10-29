@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="topbar">
+            <h2>Smart Calculator</h2>
+            <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">☀️</button>
+        </header>
+
+        <section class="calculator">
+            <div class="screen">
+                <div id="previous" class="previous"></div>
+                <input id="display" type="text" value="0"
+                    aria-label="Calculator display" readonly>
+            </div>
+
+            <div class="scientific">
+                <button data-value="sin(">sin</button>
+                <button data-value="cos(">cos</button>
+                <button data-value="tan(">tan</button>
+                <button data-value="log10(">log</button>
+                <button data-value="ln(">ln</button>
+                <button data-value="sqrt(">√</button>
+                <button data-value="^2">x²</button>
+                <button data-value="^">xʸ</button>
+                <button data-value="(">(</button>
+                <button data-value=")">)</button>
+                <button data-value="pi">π</button>
+                <button data-value="e">e</button>
+            </div>
+
+            <div class="buttons">
+                <button class="clear" data-action="clear">AC</button>
+                <button data-action="delete">DEL</button>
+                <button data-value="%">%</button>
+                <button class="operator" data-value="/">÷</button>
+
+                <button data-value="7">7</button>
+                <button data-value="8">8</button>
+                <button data-value="9">9</button>
+                <button class="operator" data-value="*">×</button>
+
+                <button data-value="4">4</button>
+                <button data-value="5">5</button>
+                <button data-value="6">6</button>
+                <button class="operator" data-value="-">−</button>
+
+                <button data-value="1">1</button>
+                <button data-value="2">2</button>
+                <button data-value="3">3</button>
+                <button class="operator" data-value="+">+</button>
+
+                <button data-value="0">0</button>
+                <button data-value=".">.</button>
+                <button data-value="Ans">Ans</button>
+                <button class="equal" data-action="calculate">=</button>
+            </div>
+        </section>
+
+        <section class="history">
+            <div class="history-header">
+                <h3>Calculation History</h3>
+                <button id="clearHistory" class="small-btn">Clear</button>
+            </div>
+            <ul id="historyList">
+                <li class="empty">Your calculations will appear here.</li>
+            </ul>
+        </section>
+
+        <p class="hint">
+            Keyboard: Enter = Calculate · Esc = Clear ·
+            Backspace = Delete
+        </p>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/mathjs@14.8.1/lib/browser/math.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
